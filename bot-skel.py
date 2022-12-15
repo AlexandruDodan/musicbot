@@ -8,6 +8,7 @@ import code         # code.interact
 import os           # environment variables
 import inspect      # call stack inspection
 import random       # dumb random number generator
+import argparse
 
 from discord.ext import commands    # Bot class and utils
 
@@ -18,6 +19,9 @@ from discord.ext import commands    # Bot class and utils
 # log_msg - fancy print
 #   @msg   : string to print
 #   @level : log level from {'debug', 'info', 'warning', 'error'}
+parser = argparse.ArgumentParser()
+parse.add_argument("--Token") 
+args = parser.parse_args()
 def log_msg(msg: str, level: str):
     # user selectable display config (prompt symbol, color)
     dsp_sel = {
